@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Memory Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div id="memory-app">
+        <header role="banner">
+            <h1>Interactive Memory Wall</h1>
+            <input type="text" id="search-bar" aria-label="Search memories" placeholder="Search memories...">
+            <button id="theme-toggle" class="secondary">Toggle Theme</button>
+        </header>
+        <section id="memory-wall" role="region" aria-label="Memory Wall"></section>
+        <button id="add-memory-btn" class="add-btn">+ Add Memory</button>
+    </div>
+    <div id="memory-modal" class="hidden" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title">Add Memory</h2>
+            <input type="text" id="memory-title" placeholder="Memory Title">
+            <textarea id="memory-description" placeholder="Description"></textarea>
+            <input type="file" id="memory-media" accept="image/*,video/*">
+            <div id="media-preview"></div>
+            <div class="modal-buttons">
+                <button id="save-memory-btn" class="primary">Save</button>
+                <button id="cancel-btn" class="secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
